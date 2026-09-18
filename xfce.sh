@@ -83,7 +83,7 @@ xfce4-whiskermenu-plugin \
 xfce4-xkb-plugin
 
 # Thunar
-sudo apk add --no-cache font-manager-thunar thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-vcs-plugin
+sudo apk add --no-cache font-manager-thunar thunar thunar-archive-plugin thunar-media-tags-plugin
 
 # Adwaita
 sudo apk add --no-cache adwaita-icon-theme adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans adwaita-xfce-icon-theme adw-gtk3
