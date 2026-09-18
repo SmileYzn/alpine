@@ -19,7 +19,7 @@ su root -c "apk update && apk add --no-cache sudo && echo '%wheel ALL=(ALL) ALL'
 sudo apk update
 
 # Base
-sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano networkmanager pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip wireplumber xz zip
+sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano networkmanager pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip util-linux wireplumber xz zip
 
 # Language for MUSL
 echo 'export LANG=pt_BR.UTF-8' | sudo tee /etc/profile.d/locale.sh
@@ -82,7 +82,7 @@ xfce4-xkb-plugin
 sudo apk add --no-cache font-manager-thunar thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-vcs-plugin
 
 # Adwaita
-sudo apk add --no-cache adwaita-icon-theme adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans adwaita-xfce-icon-theme
+sudo apk add --no-cache adwaita-icon-theme adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans adwaita-xfce-icon-theme adw-gtk3
 
 # Apps
 sudo apk add --no-cache mate-calc gcolor3 gthumb mugshot parole pavucontrol peek seahorse xarchiver xfburn
@@ -118,6 +118,13 @@ xdg-user-dirs-update
 
 # Remover pastas antigas
 rm -rf Documents Music Pictures Projects Public Templates Videos
+
+# Grupos do usuário
+sudo addgroup autologin
+
+# Adicionar aos grupos
+sudo adduser $(whoami) autologin
+sudo adduser $(whoami) plugdev
 
 # Limpar histórico
 history -c && > ~/.bash_history
