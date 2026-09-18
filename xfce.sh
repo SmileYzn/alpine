@@ -18,8 +18,17 @@ su root -c "apk update && apk add --no-cache sudo && echo '%wheel ALL=(ALL) ALL'
 # Atualizar sistema
 sudo apk update
 
+# Network Manager
+sudo apk add --no-cache networkmanager networkmanager-wifi network-manager-applet
+
+# Network Manager como padrão
+sudo rc-update add networkmanager default && sudo rc-service networkmanager start
+
+# Remover o serivço networking
+sudo rc-service networking stop && sudo rc-update del networking boot
+
 # Base
-sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano networkmanager networkmanager-wifi network-manager-applet pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip util-linux wireplumber xz zip
+sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip util-linux wireplumber xz zip
 
 # Language for MUSL
 echo 'export LANG=pt_BR.UTF-8' | sudo tee /etc/profile.d/locale.sh
