@@ -85,7 +85,7 @@ sudo apk add --no-cache font-manager-thunar thunar thunar-archive-plugin thunar-
 sudo apk add --no-cache adwaita-icon-theme adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans adwaita-xfce-icon-theme adw-gtk3
 
 # Apps
-sudo apk add --no-cache mate-calc gcolor3 gthumb mugshot parole pavucontrol peek seahorse xarchiver xfburn
+sudo apk add --no-cache mate-calc gcolor3 gthumb mousepad mugshot parole pavucontrol peek seahorse xarchiver xfburn
 
 # Firefox
 sudo apk add --no-cache firefox firefox-intl
