@@ -19,7 +19,7 @@ su root -c "apk update && apk add --no-cache sudo && echo '%wheel ALL=(ALL) ALL'
 sudo apk update
 
 # Base
-sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip wireplumber xz zip
+sudo apk add --no-cache 7zip bash-completion fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano networkmanager pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip wireplumber xz zip
 
 # Language for MUSL
 echo 'export LANG=pt_BR.UTF-8' | sudo tee /etc/profile.d/locale.sh
