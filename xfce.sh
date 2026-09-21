@@ -19,11 +19,42 @@ su root -c "apk update && apk add --no-cache sudo && echo '%wheel ALL=(ALL) ALL'
 sudo apk update
 
 # Base
-sudo apk add --no-cache 7zip bash-completion coreutils fastfetch fwupd ffmpeg ffmpegthumbnailer git gtk-update-icon-cache musl-locales musl-locales-lang nano networkmanager networkmanager-wifi network-manager-applet pipewire pipewire-pulse power-profiles-daemon powertop shadow udisks2 unzip util-linux wireplumber xz zip
+sudo apk add --no-cache \
+7zip \
+bash-completion \
+bluez \
+bluez-openrc \
+blueman \
+coreutils \
+fastfetch \
+fwupd \
+ffmpeg \
+ffmpegthumbnailer \
+git \
+gtk-update-icon-cache \
+musl-locales \
+musl-locales-lang \
+nano \
+networkmanager \
+networkmanager-wifi \
+network-manager-applet \
+pipewire \
+pipewire-pulse \
+power-profiles-daemon \
+powertop \
+shadow \
+udisks2 \
+unzip \
+util-linux \
+wireplumber \
+xz \
+zip
 
 # Network Manager
 sudo rc-update add networkmanager default
-sudo rc-service networkmanager start
+
+# Bluetooth
+sudo rc-update add bluetooth default
 
 # Language for MUSL
 echo 'export LANG=pt_BR.UTF-8' | sudo tee /etc/profile.d/locale.sh
@@ -35,23 +66,36 @@ sudo apk add --no-cache xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal xdg-d
 # CIFS, EXFAT, GVFS, NTFS
 sudo apk add --no-cache cifs-utils exfat-utils gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb ntfs-3g
 
-# Adobe Font
-sudo apk add --no-cache font-adobe-source-code-pro
-
-# Noto Font
-sudo apk add --no-cache font-noto font-noto-cjk font-noto-emoji font-noto-extra
-
-# Adwaita
-sudo apk add --no-cache adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans
-
-# Other
-sudo apk add --no-cache font-dejavu font-droid font-fira font-inconsolata font-opensans font-roboto font-terminus
+# Fontes
+sudo apk add --no-cache \
+adwaita-fonts \
+adwaita-fonts-mono \
+adwaita-fonts-sans \
+font-adobe-source-code-pro \
+font-dejavu \
+font-droid \
+font-fira \
+font-inconsolata \
+font-noto \
+font-noto-cjk \
+font-noto-emoji \
+font-noto-extra \
+font-opensans \
+font-roboto \
+font-terminus
 
 # Atualizar o chace de fontes
 sudo fc-cache -f -v
 
 # XFCE4
-sudo apk add --no-cache xfce4-appfinder xfce4-notifyd xfce-polkit xfce4-screensaver xfce4-screenshooter xfce4-taskmanager xfce4-terminal
+sudo apk add --no-cache \
+xfce4-appfinder \
+xfce4-notifyd \
+xfce-polkit \
+xfce4-screensaver \
+xfce4-screenshooter \
+xfce4-taskmanager \
+xfce4-terminal
 
 # XFCE4 Plugins
 sudo apk add --no-cache \
