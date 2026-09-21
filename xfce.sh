@@ -127,11 +127,11 @@ sudo apk add --no-cache \
 galculator \
 galculator-lang \
 gcolor3 \
-gcolor3-lang
+gcolor3-lang \
 gthumb \
-gthumb-lang
+gthumb-lang \
 mousepad \
-mousepad-lang
+mousepad-lang \
 mugshot \
 mugshot-lang \
 parole \
@@ -143,7 +143,7 @@ peek-lang \
 seahorse \ 
 seahorse-lang \
 xarchiver \
-xarchiver-lang
+xarchiver-lang \
 xfburn \
 xfburn-lang
 
