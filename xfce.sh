@@ -95,14 +95,14 @@ sudo apk add --no-cache \
 xfce4-appfinder \
 xfce4-appfinder-lang \
 xfce4-notifyd \
-xfce4-notifyd-lang\
+xfce4-notifyd-lang \
 xfce-polkit \
 xfce4-screensaver \
 xfce4-screensaver-lang \
 xfce4-screenshooter \
 xfce4-screenshooter-lang \
 xfce4-taskmanager \
-xfce4-taskmanager-lang\
+xfce4-taskmanager-lang \
 xfce4-terminal \
 xfce4-terminal-lang
 
@@ -140,7 +140,7 @@ pavucontrol \
 pavucontrol-lang \
 peek \
 peek-lang \
-seahorse \ 
+seahorse \
 seahorse-lang \
 xarchiver \
 xarchiver-lang \
@@ -151,7 +151,7 @@ xfburn-lang
 sudo apk add --no-cache firefox firefox-intl
 
 # GStreamer
-sudo apk add gstreamer gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly
+sudo apk add --no-cache gstreamer gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly
 
 # Abrir pasta do usuário
 cd /home/$(whoami)
