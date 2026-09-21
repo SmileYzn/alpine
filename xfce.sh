@@ -25,6 +25,7 @@ bash-completion \
 bluez \
 bluez-openrc \
 blueman \
+blueman-lang \
 coreutils \
 fastfetch \
 fwupd \
@@ -36,8 +37,10 @@ musl-locales \
 musl-locales-lang \
 nano \
 networkmanager \
+networkmanager-lang \
 networkmanager-wifi \
 network-manager-applet \
+network-manager-applet-lang \
 pipewire \
 pipewire-pulse \
 power-profiles-daemon \
@@ -90,50 +93,59 @@ sudo fc-cache -f -v
 # XFCE4
 sudo apk add --no-cache \
 xfce4-appfinder \
+xfce4-appfinder-lang \
 xfce4-notifyd \
+xfce4-notifyd-lang\
 xfce-polkit \
 xfce4-screensaver \
+xfce4-screensaver-lang \
 xfce4-screenshooter \
+xfce4-screenshooter-lang \
 xfce4-taskmanager \
-xfce4-terminal
+xfce4-taskmanager-lang\
+xfce4-terminal \
+xfce4-terminal-lang
 
 # XFCE4 Plugins
-sudo apk add --no-cache \
-xfce4-battery-plugin \
-xfce4-calculator-plugin \
-xfce4-clipman-plugin \
-xfce4-cpufreq-plugin \
-xfce4-cpugraph-plugin \
-xfce4-diskperf-plugin \
-xfce4-docklike-plugin \
-xfce4-fsguard-plugin \
-xfce4-genmon-plugin \
-xfce4-mailwatch-plugin \
-xfce4-mpc-plugin \
-xfce4-netload-plugin \
-xfce4-notes-plugin \
-xfce4-places-plugin \
-xfce4-pulseaudio-plugin \
-xfce4-sensors-plugin \
-xfce4-smartbookmark-plugin \
-xfce4-statusnotifier-plugin \
-xfce4-stopwatch-plugin \
-xfce4-systemload-plugin \
-xfce4-timer-plugin \
-xfce4-verve-plugin \
-xfce4-wavelan-plugin \
-xfce4-weather-plugin \
-xfce4-whiskermenu-plugin \
-xfce4-xkb-plugin
+apk add --no-cache $(apk search -q "xfce4-*-plugin")
+apk add --no-cache $(apk search -q "xfce4-*-plugin-lang")
 
 # Thunar
-sudo apk add --no-cache font-manager-thunar thunar thunar-archive-plugin thunar-media-tags-plugin
+sudo apk add --no-cache \
+thunar \
+thunar-lang \
+thunar-archive-plugin \
+thunar-archive-plugin-lang \
+thunar-media-tags-plugin \
+thunar-media-tags-plugin-lang
 
-# Adwaita
-sudo apk add --no-cache adwaita-icon-theme adwaita-fonts adwaita-fonts-mono adwaita-fonts-sans adwaita-xfce-icon-theme adw-gtk3
+# Icons
+sudo apk add --no-cache adwaita-icon-theme adwaita-xfce-icon-theme papirus-icon-theme
 
 # Apps
-sudo apk add --no-cache mate-calc gcolor3 gthumb mousepad mugshot parole pavucontrol peek seahorse xarchiver xfburn
+sudo apk add --no-cache \
+galculator \
+galculator-lang \
+gcolor3 \
+gcolor3-lang
+gthumb \
+gthumb-lang
+mousepad \
+mousepad-lang
+mugshot \
+mugshot-lang \
+parole \
+parole-lang \
+pavucontrol \
+pavucontrol-lang \
+peek \
+peek-lang \
+seahorse \ 
+seahorse-lang \
+xarchiver \
+xarchiver-lang
+xfburn \
+xfburn-lang
 
 # Firefox
 sudo apk add --no-cache firefox firefox-intl
