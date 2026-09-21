@@ -107,8 +107,8 @@ xfce4-terminal \
 xfce4-terminal-lang
 
 # XFCE4 Plugins
-apk add --no-cache $(apk search -q "xfce4-*-plugin")
-apk add --no-cache $(apk search -q "xfce4-*-plugin-lang")
+sudo apk add --no-cache $(apk search -q "xfce4-*-plugin")
+sudo apk add --no-cache $(apk search -q "xfce4-*-plugin-lang")
 
 # Thunar
 sudo apk add --no-cache \
